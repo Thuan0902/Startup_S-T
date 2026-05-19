@@ -1,0 +1,14 @@
+[app]
+  app = "webaff"
+  primary_region = "iad"
+
+[build]
+  image = ""
+  builder = "paketobuildpacks/builder:base"
+
+[deploy]
+  release_command = "php artisan migrate --force || true"
+
+[env]
+  APP_ENV = "production"
+  APP_DEBUG = "false"

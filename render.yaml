@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: webaff
+    env: docker
+    branch: main
+    dockerfilePath: Dockerfile
+    autoDeploy: true
+    plan: free
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
